@@ -1,0 +1,3 @@
+[submodule "ticketing-common-lib"]
+	path = ticketing-common-lib
+	url = git@github.com:smartdev0612/ticketing-common-lib.git

@@ -10,7 +10,7 @@ const header = ({ currentUser }) => {
   .map(({ label, href }) => {
     return (
       <li key={href} className='nav-item'>
-        <Link href={href}>
+        <Link href={href} legacyBehavior>
           <a className='nav-link'>{label}</a>
         </Link>
       </li>
@@ -19,7 +19,7 @@ const header = ({ currentUser }) => {
 
   return (
     <nav className='navbar navbar-light bg-light'>
-      <Link href='/'>
+      <Link href='/' legacyBehavior>
         <a className='navbar-brand'>GitTix</a>
       </Link>
 
