@@ -90,7 +90,7 @@ it('updates the ticket provided valid inputs', async () => {
     .set('Cookie', cookie)
     .send({
       title: 'new title',
-      price: 20
+      price: 200
     })
     .expect(200);
 
@@ -98,6 +98,6 @@ it('updates the ticket provided valid inputs', async () => {
     .get(`/api/tickets/${response.body.id}`)
     .send();
 
-  expect(ticketResponse.body.title).toEqual('new title')
-  expect(ticketResponse.body.title).toEqual(100);
+  expect(ticketResponse.body.title).toEqual('new title');
+  expect(ticketResponse.body.price).toEqual(200);
 });
