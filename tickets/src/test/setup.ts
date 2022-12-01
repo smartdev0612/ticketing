@@ -9,6 +9,7 @@ declare global {
 }
 
 let mongo: any;
+
 beforeAll(async () => {
   process.env.JWT_KEY = 'asdf';
 
@@ -36,7 +37,7 @@ afterAll(async () => {
 global.signin = async () => {
   // Build a JWT payload. { id, email }
   const payload = {
-    id: 'adfdsafd',
+    id: new mongoose.Types.ObjectId().toHexString(),
     email: 'test@test.com'
   }
 
