@@ -26,16 +26,3 @@ spec:
               value: ticketing
             - name: REDIS_HOST
               value: expiration-redis-srv
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: expiration-srv
-spec:
-  selector:
-    app: expiration
-  ports:
-    - name: expiration
-      protocol: TCP
-      port: 3000
-      targetPort: 3000
