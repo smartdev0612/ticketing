@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import Router from 'next/router';
 import useRequest from '../../hooks/use-request';
@@ -51,6 +51,6 @@ OrderShow.getInitialProps = async (context, client) => {
   const { data } = await client.get(`/api/orders/${orderId}`);
 
   return { order: data };
-} 
+}; 
 
-export default OrderShow
+export default OrderShow;
